@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Valentine For Bam ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #E63946 0%, #FF1744 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .heart {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1.2); }
+        }
+
+        h1 {
+            color: #E63946;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #FF1744;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .hint {
+            background: #FFE5EC;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            color: #E63946;
+            font-weight: bold;
+            border-left: 4px solid #E63946;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #E63946;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #FF1744;
+            box-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+        }
+
+        button {
+            background: linear-gradient(135deg, #E63946 0%, #FF1744 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .message {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success {
+            color: #27ae60;
+            background: #d5f4e6;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            animation: slideIn 0.5s ease;
+        }
+
+        .error {
+            color: #c0392b;
+            background: #fadbd8;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .special-content {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .love-message {
+            font-size: 24px;
+            color: #E63946;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .hearts {
+            font-size: 40px;
+            margin: 20px 0;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .love-letter {
+            background: linear-gradient(135deg, #FFF5F6 0%, #FFE5EC 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border: 2px solid #E63946;
+            text-align: left;
+            font-family: 'Georgia', serif;
+            line-height: 2;
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.2);
+        }
+
+        .love-letter-content {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .love-letter-signature {
+            text-align: right;
+            margin-top: 20px;
+            color: #E63946;
+            font-weight: bold;
+        }
+
+        .spotify-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #b91d85 0%, #1ed760 100%);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .spotify-label {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+.vinyl-record {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            background: radial-gradient(circle at 30% 30%, #1a1a1a, #000000);
+            border-radius: 50%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.8), inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spin 20s linear infinite;
+            position: relative;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .vinyl-record:hover {
+            animation-play-state: paused;
+        }
+
+        .vinyl-center {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, #E63946, #FF1744);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: inset -1px -1px 3px rgba(0, 0, 0, 0.8), inset 1px 1px 3px rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+
+        .vinyl-grooves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: repeating-radial-gradient(
+                circle,
+                #000 0px,
+                #000 2px,
+                #111 2px,
+                #111 4px
+            );
+        }
+
+        .spotify-embed-container {
+            margin-top: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .spotify-embed-container iframe {
+            border: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 10px 50px rgba(230, 57, 70, 0.4);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            color: #E63946;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .activities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .activity-btn {
+            background: linear-gradient(135deg, #E63946 0%, #FF1744 100%);
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .activity-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+        }
+
+        .activity-icon {
+            font-size: 28px;
+        }
+
+        .memory-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+            margin: 20px auto;
+            display: block;
+        }
+
+        .anniversary-counter {
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF5F6 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid #E63946;
+        }
+
+        .anniversary-title {
+            color: #E63946;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .anniversary-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(230, 57, 70, 0.2);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #E63946;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Happy Valentine's Day</h1>
+        <p class="subtitle">สำหรับคนพิเศษของฉัน</p>
+
+        <div class="hint">
+            💡 hint: วันเกิด
+        </div>
+
+        <div class="input-group">
+            <label for="codeInput">ใส่รหัส:</label>
+            <input 
+                type="password" 
+                id="codeInput" 
+                placeholder="000000"
+                maxlength="6"
+            >
+        </div>
+
+        <button onclick="checkCode()">ตรวจสอบ</button>
+
+        <div id="message" class="message"></div>
+
+        <div id="successContent" style="display: none; margin-top: 20px;">
+            <div class="anniversary-counter">
+                <div class="anniversary-title">⏰ เราคบกันมาแล้ว</div>
+                <div class="anniversary-stats">
+                    <div class="stat-box">
+                        <div class="stat-number" id="yearsCount">0</div>
+                        <div class="stat-label">เดือน</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="monthsCount">0</div>
+                        <div class="stat-label">วัน</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="daysCount">0</div>
+                        <div class="stat-label">ช่ั่วโมง</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hearts">💕 🎀 💕</div>
+            <h2 style="color: #E63946; margin: 20px 0; font-size: 28px;">✅ ยินดีด้วย!</h2>
+            <p style="color: #333; font-size: 16px; margin-bottom: 30px;">เธอสามารถเลือกและสัมผัสความรักในแต่ละกิจกรรมได้นะ 💝</p>
+            <div class="activities-container">
+                <button class="activity-btn" onclick="openModal('loveMessageModal')">
+                    <span class="activity-icon">💌</span>
+                    <span>จดหมายรักของฉัน</span>
+                </button>
+                <button class="activity-btn" onclick="openModal('musicModal')">
+                    <span class="activity-icon">🎵</span>
+                    <span>เพลงที่ส่งให้เธอ</span>
+                </button>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <h3 style="color: #E63946; margin-bottom: 15px;">📸 ความทรงจำของเรา</h3>
+                <img src="image/1000007572.jpg" alt="Our Memory" class="memory-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Love Message Modal -->
+    <div id="loveMessageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loveMessageModal')">&times;</span>
+            <div style="text-align: center;">
+                <h2 style="color: #E63946; margin-bottom: 20px;">💌 จดหมายรักของฉัน</h2>
+            </div>
+            <div class="love-letter">
+                <div class="love-letter-content">
+                    <p>คนที่รัก 💌</p>
+                    <p style="margin-top: 15px;">
+                        เค้ารู้สึกว่าเค้าโชคดีมากที่ได้คบกับเธอ เธอเปลี่ยนแปลงชีวิตของเค้าให้มีสีสันและมีความสุข
+                    </p>
+                    <p style="margin-top: 15px;">
+                        ทุกครั้งที่อยู่ข้างเธอ เค้ามีความสุขมากๆ หัวใจฉันเต็มไปด้วยความรัก เธอทำให้เค้ารู้สึกว่าชีวิตนี้มีค่า
+                    </p>
+                    <p style="margin-top: 15px;">
+                        เค้ารักเธอมากๆ นะคับบ รักจนไมสามารถบรรยายได้ เค้าต้องการให้เธอรู้ว่าเธอเป็นคนที่สำคัญที่สุดในชีวิตของเค้าเลย
+                    </p>
+                    <p style="margin-top: 15px;">
+                        เค้าหวังว่าเราจะอยู่ด้วยกันไปนาน จนถึงวันที่แต่งงานกันเลยนะคับบ
+                    </p>
+                    <p style="margin-top: 15px;">
+                        ขอบคุณที่เธอเป็นส่วนหนึ่งของชีวิตของเค้า รักเธอที่สุดในโลกเลย ❤️❤️❤️
+                    </p>
+                </div>
+                <div class="love-letter-signature">
+                    With all my love,<br>
+                    James ❤️
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Modal -->
+    <div id="musicModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('musicModal')">&times;</span>
+            <div style="text-align: center;">
+                <h2 style="color: #E63946; margin-bottom: 20px;">🎵 เพลงสำหรับคนที่รัก</h2>
+            </div>
+            <div style="text-align: center;">
+                <div class="vinyl-record">
+                    <div class="vinyl-grooves"></div>
+                    <div class="vinyl-center"></div>
+                </div>
+            </div>
+            <div class="spotify-embed-container" style="margin-top: 20px;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4jyfcb5s4H3hKl0CJXjYei?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Photo Modal -->
+    <div id="memoryModal" class="modal" style="display: none;">
+    </div>
+
+    <script>
+        const CORRECT_CODE = '031152';
+        const START_DATE = new Date(2025, 11, 1); // December 1, 2025 (1 ธันวาคม พ.ศ. 2568)
+
+        // Calculate anniversary
+        function calculateAnniversary() {
+            const today = new Date();
+            
+            // Calculate total months
+            let months = (today.getFullYear() - START_DATE.getFullYear()) * 12;
+            months += today.getMonth() - START_DATE.getMonth();
+            
+            // Calculate days
+            let days = today.getDate() - START_DATE.getDate();
+            
+            if (days < 0) {
+                months--;
+                const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            
+            // Calculate hours
+            let hours = today.getHours() - START_DATE.getHours();
+            if (hours < 0) {
+                days--;
+                hours += 24;
+            }
+            
+            if (days < 0) {
+                months--;
+                const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            
+            return { months, days, hours };
+        }
+
+        // Update anniversary display
+        function updateAnniversary() {
+            const anniversary = calculateAnniversary();
+            document.getElementById('yearsCount').textContent = anniversary.months;
+            document.getElementById('monthsCount').textContent = anniversary.days;
+            document.getElementById('daysCount').textContent = anniversary.hours;
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('codeInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkCode();
+            }
+        });
+
+        function checkCode() {
+            const input = document.getElementById('codeInput');
+            const message = document.getElementById('message');
+            const successContent = document.getElementById('successContent');
+            const code = input.value;
+
+            if (code === CORRECT_CODE) {
+                message.className = 'message success';
+                message.textContent = '✅ ถูกต้อง! ขึ้นใจจริงๆเลย!';
+                message.style.display = 'block';
+                successContent.style.display = 'block';
+                updateAnniversary(); // Update the anniversary counter
+                input.disabled = true;
+                document.querySelector('button').disabled = true;
+            } else if (code === '') {
+                message.className = 'message error';
+                message.textContent = '❌ กรุณาใส่รหัส';
+                message.style.display = 'block';
+                successContent.style.display = 'none';
+            } else {
+                message.className = 'message error';
+                message.textContent = '❌ รหัสไม่ถูกต้อง ลองใหม่อีกครั้ง';
+                message.style.display = 'block';
+                successContent.style.display = 'none';
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
